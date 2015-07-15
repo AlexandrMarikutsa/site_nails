@@ -19,6 +19,6 @@ public interface PhotoService {
     public List<Picture> readAllPictures(int albumId);
     public BaseEntity readPhotoById(int photoId);
     public BufferedImage scaleImage(int WIDTH, int HEIGHT, String filename);
-    public String uploadPhoto(int albumId, MultipartFile file, String photoName);
+    public String uploadPhoto(int albumId, byte[] bytes, String photoName);
     public void updatePhoto(String photoName,int photoId,int albumId);
 }

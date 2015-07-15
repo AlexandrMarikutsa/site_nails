@@ -10,10 +10,6 @@ import java.util.List;
 @Table(name = "comment")
 public class Comment  extends BaseEntity{
 
-    @Id
-    @GeneratedValue
-    @Column(name = "id")
-    private Integer id;
     private String comment;
 
     @ManyToOne
@@ -24,12 +20,6 @@ public class Comment  extends BaseEntity{
     @JoinTable(name = "user_comments", joinColumns = { @JoinColumn(name = "comment_id") }, inverseJoinColumns = { @JoinColumn(name = "user_id") })
     private List<User> users;
 
-    public Integer getId() {
-        return id;
-    }
-    public void setId(Integer id) {
-        this.id = id;
-    }
     public String getComment() {
         return comment;
     }

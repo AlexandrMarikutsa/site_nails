@@ -41,7 +41,7 @@ public class PhotoServiceImpl implements PhotoService {
         photoDao.delete(photoDao.read(photoId,Picture.class));
     }
 
-   @Override
+    @Override
     public void addPhoto(int albumId,String photoName) {
        Picture picture = new Picture();
        picture.setName(photoName);
@@ -79,14 +79,9 @@ public class PhotoServiceImpl implements PhotoService {
     }
 
     @Override
-    public String uploadPhoto(int albumId, MultipartFile file, String photoName) {
+    public String uploadPhoto(int albumId, byte[] bytes, String photoName) {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        if (!file.isEmpty()) {
-            if (file.getOriginalFilename().endsWith(".jpg") ||
-                    file.getOriginalFilename().endsWith(".gif") ||
-                    file.getOriginalFilename().endsWith(".png")) {
                 try {
-                    byte[] bytes = file.getBytes();
                     BufferedOutputStream stream =
                             new BufferedOutputStream(new FileOutputStream(new File(servletContext.getRealPath("/") + "/pictures_nails/" + photoName + ".png")));
                     stream.write(bytes);
@@ -102,14 +97,7 @@ public class PhotoServiceImpl implements PhotoService {
                 } catch (Exception e) {
                     return "You failed to upload " + photoName + " => " + e.getMessage();
                 }
-            }else{
-                return  "Format of uploading photo is not correctly.";
-            }
-        }
-        else {
-            return "You failed to upload " + photoName + " because the file was empty.";
-        }
-        return "redirect:/album/{albumId}";
+         return "redirect:/album/{albumId}";
     }
 
     @Override

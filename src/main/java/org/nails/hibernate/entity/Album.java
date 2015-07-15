@@ -13,10 +13,6 @@ import java.util.List;
 @Table(name = "album")
 public class Album extends BaseEntity{
 
-    @Id
-    @GeneratedValue
-    @Column(name = "id")
-    private Integer id;
     private String name;
     private String description;
     private Date creationDate = new Date();
@@ -27,21 +23,11 @@ public class Album extends BaseEntity{
 
     @OneToMany (fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "album")
     private List<Picture> pictures = new ArrayList<Picture>();
-//    private String[] labels;
-//    private List<Picture> pictures = new ArrayList<Picture>();
 
     public Album() {
     }
     public Album(String name) {
         this.name = name;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
     }
 
     public String getName() {

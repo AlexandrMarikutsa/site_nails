@@ -13,11 +13,6 @@ import java.util.List;
 @Table(name = "USERS")
 public class User extends BaseEntity{
 
-    @Id
-    @GeneratedValue
-    @Column(name = "USER_ID")
-    private int id;
-
     @Column(name = "U_PASSWORD", unique = false, nullable = false, length = 100)
     private String password;
 
@@ -31,9 +26,6 @@ public class User extends BaseEntity{
     @ManyToMany
     @JoinTable(name="user_comments", joinColumns = {@JoinColumn(name = "user_id")}, inverseJoinColumns={@JoinColumn(name="comment_id")})
     private List<Comment> comments;
-
-//    @OneToMany (fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "user")
-//    private List<Comment> comments = new ArrayList<Comment>();
 
     @OneToMany (fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "user")
     private List<Album> albums = new ArrayList<Album>();
@@ -67,14 +59,6 @@ public class User extends BaseEntity{
         this.confirmPassword = confirmPassword;
 
     };
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getPassword() {
         return password;

@@ -46,7 +46,22 @@ public class AdminController {
     public String handleFileUpload(@PathVariable int albumId,
                                    @RequestParam("photoName") String photoName,
                                    @RequestParam("file") MultipartFile file) {
-        return photoService.uploadPhoto(albumId, file, photoName);
+        if (!file.isEmpty()) {
+            if (file.getOriginalFilename().endsWith(".jpg") ||
+                    file.getOriginalFilename().endsWith(".gif") ||
+                    file.getOriginalFilename().endsWith(".png")) {
+                try {
+                    byte[] bytes = file.getBytes();
+                    return photoService.uploadPhoto(albumId, bytes, photoName);
+                } catch (Exception e) {
+                    return "You failed to upload " + photoName + " => " + e.getMessage();
+                }
+            } else {
+                return "Format of uploading photo is not correctly.";
+            }
+        }else {
+            return "You failed to upload " + photoName + " because the file was empty.";
+        }
     }
 
     @RequestMapping(value = "/deletePhoto/{photoId}/{albumId}")

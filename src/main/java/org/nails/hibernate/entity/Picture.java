@@ -13,10 +13,6 @@ import java.util.Set;
 @Table(name = "picture")
 public class Picture extends BaseEntity{
 
-    @Id
-    @GeneratedValue
-    @Column(name = "id")
-    private Integer id;
     private String name;
     @OneToMany (fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "picture")
     private List<Comment> comments = new ArrayList<Comment>();
@@ -31,14 +27,6 @@ public class Picture extends BaseEntity{
     private String directoryMini;
 
     public Picture() {
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
     }
 
     public String getName() {
