@@ -21,8 +21,8 @@ public class PhotoDaoImpl extends BaseDaoImpl implements PhotoDao {
 
     @Override
     public List<Picture> getAllPictures(int albumId) {
-//        return   sessionFactory.getCurrentSession().createCriteria(Picture.class).add(Restrictions.eq("id", albumId)).list();
-        return sessionFactory.getCurrentSession().createSQLQuery("SELECT * FROM Picture p WHERE p.album_id =" + albumId).addEntity(Picture.class).list();
+        return   sessionFactory.getCurrentSession().createCriteria(Picture.class).add(Restrictions.eq("album.id", albumId)).list();
+//        return sessionFactory.getCurrentSession().createSQLQuery("SELECT * FROM Picture p WHERE p.album_id =" + albumId).addEntity(Picture.class).list();
 //        return sessionFactory.getCurrentSession().createQuery("from Picture p where p.album_id =" + albumId).list();
     }
 }
