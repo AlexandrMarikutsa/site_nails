@@ -1,0 +1,71 @@
+.profile-avatar{
+    width: 300px;
+    height: 150px;
+}
+
+.avatar-upload{
+    margin-top:5px;
+}
+
+.form-horizontal .controls {
+    margin-top: 5px;
+}
+
+.updateCourse{
+    background-color: #DFF0D8;
+    padding: 30px;
+    padding-right: 300px;
+}
+
+.coursesAdminResult{
+    background-color: #d5d5d5;
+}
+
+.endTesting{
+    align-content: center;
+}
+.text{
+    text-align: center;
+}
+
+.testMain {
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 50px;
+}
+
+.back{
+    background-color: #FFF9FB;
+}
+
+.radius{
+    background-color: #EEF4F7;
+}
+
+.js-submit{
+    margin-left: 20px;
+}
+
+.myAnswer{
+    margin: 10px;
+}
+
+/*for design.jsp ->*/
+#items .item {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: linear-gradient(to bottom, #F6F6F6 0%, #EAEAEA 100%) repeat scroll 0 0 transparent;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 2px 1px rgba(0, 0, 0, 0.1), 0 3px 1px rgba(0, 0, 0, 0.05);
+    text-shadow: 0 1px 0 #DDDDDD;
+    width: 60%;
+    margin: 0px;
+    float: left;
+    position:relative;
+    left:20%;
+}
+/*<- for design.jsp*/
+
+

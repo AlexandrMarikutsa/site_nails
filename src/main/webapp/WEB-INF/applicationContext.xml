@@ -1,0 +1,56 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-2.5.xsd
+        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsdx`">
+
+    <context:annotation-config />
+    <context:component-scan base-package="org.nails" />
+    <mvc:annotation-driven />
+
+    <import resource="data-source.xml"/>
+    <import resource="hibernate-dao.xml"/>
+    <bean id="multipartResolver"
+          class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="maxUploadSize">
+            <value>104857600</value>
+        </property>
+        <property name="maxInMemorySize">
+            <value>4096</value>
+        </property>
+    </bean>
+
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
+        <!--<property name="prefix" value="/WEB-INF/jsp/" />-->
+        <property name="prefix" value="/WEB-INF/jsp/" />
+        <property name="suffix" value=".jsp" />
+    </bean>
+
+    <!--<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">-->
+        <!--<property name="host" value="${mail.host}" />-->
+        <!--<property name="port" value="587" />-->
+        <!--<property name="username" value="${mail.username}" />-->
+        <!--<property name="password" value="${mail.password}" />-->
+
+        <!--<property name="javaMailProperties">-->
+            <!--<props>-->
+                <!--<prop key="mail.transport.protocol">${mail.transport.protocol}</prop>-->
+                <!--<prop key="mail.smtp.ssl.trust">${mail.smtp.ssl.trust}</prop>-->
+                <!--<prop key="mail.smtp.auth">${mail.smtp.auth}</prop>-->
+                <!--<prop key="mail.smtp.starttls.enable">${mail.smtp.starttls.enable}</prop>-->
+            <!--</props>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+    <!--<bean id="gsonBuilder" class="com.google.gson.GsonBuilder" />-->
+    <!--<bean id="gson" factory-bean="gsonBuilder" factory-method="create" />-->
+    
+
+
+</beans>
