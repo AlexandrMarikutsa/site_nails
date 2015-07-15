@@ -70,10 +70,10 @@
       <file leaf-file-name="design.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/design.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.519084">
-              <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.47582698">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding>
-                <marker date="1436952903804" expanded="true" signature="2663:2686" placeholder="..." />
+                <marker date="1436953666000" expanded="true" signature="2638:2661" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -952,12 +952,12 @@
       <workItem from="1436619207682" duration="19516000" />
       <workItem from="1436810651714" duration="1203000" />
       <workItem from="1436816406782" duration="3519000" />
-      <workItem from="1436856718903" duration="17129000" />
+      <workItem from="1436856718903" duration="17874000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="220586000" />
+    <option name="totallyTimeSpent" value="221331000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1411,10 +1411,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/design.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.519084">
-          <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.47582698">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
-            <marker date="1436952903804" expanded="true" signature="2663:2686" placeholder="..." />
+            <marker date="1436953666000" expanded="true" signature="2638:2661" placeholder="..." />
           </folding>
         </state>
       </provider>
