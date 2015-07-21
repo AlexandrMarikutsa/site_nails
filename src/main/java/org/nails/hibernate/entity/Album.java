@@ -6,12 +6,9 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-/**
- * Created by Aleksander on 09.06.2015.
- */
 @Entity
 @Table(name = "album")
-public class Album extends BaseEntity{
+public class Album extends BaseEntity {
 
     private String name;
     private String description;
@@ -21,11 +18,12 @@ public class Album extends BaseEntity{
     @JoinColumn(name = "user_id")
     private User user;
 
-    @OneToMany (fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "album")
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "album")
     private List<Picture> pictures = new ArrayList<Picture>();
 
     public Album() {
     }
+
     public Album(String name) {
         this.name = name;
     }

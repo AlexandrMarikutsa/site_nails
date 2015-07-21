@@ -18,36 +18,44 @@
 
     <div class="form-group">
         <span class="must">*</span><label for="email">Email address</label>
-        <input type="email" maxlength="39" class="form-control js-email" id="email" name="email" placeholder="Enter email">
+        <input type="email" maxlength="39" class="form-control js-email" id="email" name="email"
+               placeholder="Enter email">
     </div>
     <div class="form-group ">
         <span class="must">*</span><label for="firstName">First Name</label>
-        <input type="text" maxlength="24" class="form-control js-name" id="firstName" name="firstName" placeholder="Enter your first name">
+        <input type="text" maxlength="24" class="form-control js-name" id="firstName" name="firstName"
+               placeholder="Enter your first name">
     </div>
     <div class="form-group">
         <span class="must">*</span><label for="lastName">Last Name</label>
-        <input type="text" maxlength="24" class="form-control js-name" id="lastName" name="lastName" placeholder="Enter your last name">
+        <input type="text" maxlength="24" class="form-control js-name" id="lastName" name="lastName"
+               placeholder="Enter your last name">
     </div>
 
     <div class="form-group">
         <span class="must">*</span><label for="password">Password</label>
-        <input type="password" maxlength="50" class="form-control js-pass" id="password" name="password" placeholder="Password">
+        <input type="password" maxlength="50" class="form-control js-pass" id="password" name="password"
+               placeholder="Password">
     </div>
     <div class="form-group ">
-        <span class="must">*</span><label for="password">Confirm password</label>
-        <input type="password" maxlength="50" class="form-control js-confirm-pass" id="confirmPassword"  name="confirmPassword"
+        <span class="must">*</span><label for="confirmPassword">Confirm password</label>
+        <input type="password" maxlength="50" class="form-control js-confirm-pass" id="confirmPassword"
+               name="confirmPassword"
                placeholder="Repeat your password">
     </div>
 
     <div class="form-group ">
         <label for="phoneNumber">Phone</label>
-        <input type="text" maxlength="29" class="form-control js-phone" id="phoneNumber" name="phoneNumber" placeholder="Enter your phone">
+        <input type="text" maxlength="29" class="form-control js-phone" id="phoneNumber" name="phoneNumber"
+               placeholder="Enter your phone">
     </div>
     <div class="form-group ">
         <label for="birthday">Birthday</label>
-        <input type="date" name="birthday" id="birthday" name="birthday" class="form-control js-birthday">
+        <input type="date" name="birthDay" id="birthday" class="form-control js-birthday">
     </div>
-    <p class="err-msg">${errorMessage}</p>
+    <c:forEach var="errorMessage" items="${errorMessages}">
+        <p class="err-msg">${errorMessage}</p>
+    </c:forEach>
     <input type="submit" value="Register" class="btn btn-primary">
 
 </form>

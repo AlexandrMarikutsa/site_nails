@@ -1,7 +1,4 @@
 
-/**
- * Created by helldes on 24.05.2015.
- */
 $.fn.serializeObject = function() {
     var o = {};
     var a = this.serializeArray();

@@ -8,7 +8,7 @@
         <div class="sidebar-nav navbar-collapse">
             <ul class="nav" id="side-menu">
                 <security:authorize access="hasRole('ROLE_ADMIN')">
-                    <li class="text-center" style="margin-top: -15px" >
+                    <li class="text-center" style="margin-top: -15px">
                         <h3>Admin Panel</h3>
                     </li>
                     <li>
@@ -16,11 +16,11 @@
                     </li>
                 </security:authorize>
                 <security:authorize access="hasRole('ROLE_USER') or hasRole('ROLE_ANONYMOUS')">
-                    <li class="text-center" style="margin-top: -15px" >
+                    <li class="text-center" style="margin-top: -15px">
                         <h3>User Panel</h3>
                     </li>
                 </security:authorize>
-                 <%--</security:authorize>--%>
+                <%--</security:authorize>--%>
                 <security:authorize access="hasRole('ROLE_USER') or hasRole('ROLE_ANONYMOUS') or hasRole('ROLE_ADMIN')">
                     <li>
                         <a href="/design" class="text-left">Design</a>

@@ -16,7 +16,8 @@ public class BaseDaoImpl implements BaseDao {
 
     @Override
     public void create(BaseEntity obj) {
-        sessionFactory.getCurrentSession().save(obj);    }
+        sessionFactory.getCurrentSession().save(obj);
+    }
 
     @Override
     public void update(BaseEntity obj) {

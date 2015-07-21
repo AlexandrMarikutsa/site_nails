@@ -9,9 +9,6 @@ import org.springframework.stereotype.Service;
 import javax.transaction.Transactional;
 import java.util.List;
 
-/**
- * Created by Aleksander on 13.06.2015.
- */
 @Service
 @Transactional
 public class AlbumServiceImpl implements AlbumService {
@@ -41,6 +38,6 @@ public class AlbumServiceImpl implements AlbumService {
 
     @Transactional
     public Album readAlbumById(int albumId) {
-        return albumDao.getAlbumById(albumId);
+        return (Album) albumDao.read(albumId, Album.class);
     }
 }

@@ -9,16 +9,20 @@ import java.awt.image.BufferedImage;
 import java.util.List;
 import java.util.Locale;
 
-/**
- * Created by Aleksander on 13.06.2015.
- */
 public interface PhotoService {
     public void deletePhoto(int photoId);
+
     public void deletePhotoFromFolder(int photoId);
+
     public void addPhoto(int albumId, String photoName);
+
     public List<Picture> readAllPictures(int albumId);
-    public BaseEntity readPhotoById(int photoId);
+
+    public Picture readPhotoById(int photoId);
+
     public BufferedImage scaleImage(int WIDTH, int HEIGHT, String filename);
+
     public String uploadPhoto(int albumId, byte[] bytes, String photoName);
-    public void updatePhoto(String photoName,int photoId,int albumId);
+
+    public void updatePhoto(String photoName, int photoId, int albumId);
 }

@@ -10,7 +10,7 @@
             <span class="sr-only">Toggle navigation</span>
 
         </button>
-        <i class="navbar-brand fa fa-bars fa-2x" id="menu-toggle"style="margin-top:-5px"></i>
+        <i class="navbar-brand fa fa-bars fa-2x" id="menu-toggle" style="margin-top:-5px"></i>
     </div>
     <!-- /.navbar-header -->
 
@@ -25,22 +25,22 @@
         <!-- /.dropdown -->
         <li class="dropdown">
             <security:authorize access="hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')">
-                <li><a href="<c:url value="/j_spring_security_logout"/>"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
-                </li>
-            </security:authorize>
-            <security:authorize access="hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')">
-                <ul class="dropdown-menu dropdown-user">
-                    <li class="divider"></li>
-                    <li><a href="/auth?logout"><i class="fa fa-sign-out fa-fw"></i> Logout</a></li>
-                </ul>
-            </security:authorize>
-            <security:authorize access="!hasRole('ROLE_ADMIN') and !hasRole('ROLE_USER')">
-               <ul>
-                    <li><a href="/registration"><i class="fa fa-gear fa-fw"></i>Register</a></li>
-                    <li><a href="/auth"><i class="fa fa-sign-out fa-fw"></i> Login</a></li>
-                </ul>
-            </security:authorize>
-            <!-- /.dropdown-user -->
+        <li><a href="<c:url value="/j_spring_security_logout"/>"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+        </li>
+        </security:authorize>
+        <security:authorize access="hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')">
+            <ul class="dropdown-menu dropdown-user">
+                <li class="divider"></li>
+                <li><a href="/auth?logout"><i class="fa fa-sign-out fa-fw"></i> Logout</a></li>
+            </ul>
+        </security:authorize>
+        <security:authorize access="!hasRole('ROLE_ADMIN') and !hasRole('ROLE_USER')">
+            <ul>
+                <li><a href="/registration"><i class="fa fa-gear fa-fw"></i>Register</a></li>
+                <li><a href="/auth"><i class="fa fa-sign-out fa-fw"></i> Login</a></li>
+            </ul>
+        </security:authorize>
+        <!-- /.dropdown-user -->
         </li>
         <!-- /.dropdown -->
     </ul>

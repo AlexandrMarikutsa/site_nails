@@ -6,15 +6,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-/**
- * Created by Aleksander on 09.06.2015.
- */
 @Entity
 @Table(name = "picture")
-public class Picture extends BaseEntity{
+public class Picture extends BaseEntity {
 
     private String name;
-    @OneToMany (fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "picture")
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "picture")
     private List<Comment> comments = new ArrayList<Comment>();
 
     @ManyToOne
@@ -61,9 +58,11 @@ public class Picture extends BaseEntity{
         this.directory = directory;
     }
 
-    public String getDirectoryMini() {return directoryMini;
+    public String getDirectoryMini() {
+        return directoryMini;
     }
 
-    public void setDirectoryMini(String directoryMini) {this.directoryMini = directoryMini;
+    public void setDirectoryMini(String directoryMini) {
+        this.directoryMini = directoryMini;
     }
 }

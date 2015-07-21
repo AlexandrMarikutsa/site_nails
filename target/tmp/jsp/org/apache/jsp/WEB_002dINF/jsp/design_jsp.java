@@ -79,7 +79,7 @@ public final class design_jsp extends org.apache.jasper.runtime.HttpJspBase
       }
       if (_jspx_meth_c_forEach_0(_jspx_page_context))
         return;
-      out.write("\r\n    </div>\r\n  </div>\r\n  <script>\r\n      $(\"#menu-toggle\").click(function(e) {\r\n        e.preventDefault();\r\n        $(\"#wrapper\").toggleClass(\"toggled\");\r\n      });\r\n\r\n      function showInput(data){\r\n          $('#'+data).html('<input type=\"text\"\"/>' +\r\n          '<a href=\"#\" class=\"btn btn-warning btn-sm\" style=\"padding: 0; border: 3px\">SAVE</a>')\r\n      }\r\n\r\n     </script>\r\n</div>\r\n</body>\r\n</html>\r\n");
+      out.write("\r\n    </div>\r\n  </div>\r\n  <script>\r\n      $(\"#menu-toggle\").click(function(e) {\r\n        e.preventDefault();\r\n        $(\"#wrapper\").toggleClass(\"toggled\");\r\n      });\r\n\r\n      function showInput(data){\r\n          $('#'+data).html('<input type=\"text\"/>' +\r\n          '<a href=\"#\" class=\"btn btn-warning btn-sm\" style=\"padding: 0; border: 3px\">SAVE</a>')\r\n      }\r\n\r\n     </script>\r\n</div>\r\n</body>\r\n</html>\r\n");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;

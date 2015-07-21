@@ -23,21 +23,8 @@ public class UserDaoImpl extends BaseDaoImpl implements UserDao {
 
     @Override
     public User loadUserByUsername(String email) throws UsernameNotFoundException {
-
-        List<User> list = sessionFactory.getCurrentSession().createCriteria(User.class)
-                .add(Restrictions.eq("email", email)).list();
-
-        if (list.size() > 0) {
-            return list.get(0);
-        } else {
-            return null;
-        }
-    }
-
-    @Override
-    public User getUserByEmail(String email) throws UsernameNotFoundException {
-        User user = (User) sessionFactory.getCurrentSession().createCriteria(User.class).add(Restrictions.eq("email", email)).uniqueResult();
-        return user;
+        return (User) sessionFactory.getCurrentSession().createCriteria(User.class)
+                .add(Restrictions.eq("email", email)).uniqueResult();
     }
 
 }

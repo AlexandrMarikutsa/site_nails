@@ -3,12 +3,9 @@ package org.nails.hibernate.entity;
 import javax.persistence.*;
 import java.util.List;
 
-/**
- * Created by Aleksander on 09.06.2015.
- */
 @Entity
 @Table(name = "comment")
-public class Comment  extends BaseEntity{
+public class Comment extends BaseEntity {
 
     private String comment;
 
@@ -16,13 +13,14 @@ public class Comment  extends BaseEntity{
     @JoinColumn(name = "picture_id")
     private Picture picture;
 
-    @ManyToMany(cascade = CascadeType.ALL,fetch=FetchType.EAGER)
-    @JoinTable(name = "user_comments", joinColumns = { @JoinColumn(name = "comment_id") }, inverseJoinColumns = { @JoinColumn(name = "user_id") })
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinTable(name = "user_comments", joinColumns = {@JoinColumn(name = "comment_id")}, inverseJoinColumns = {@JoinColumn(name = "user_id")})
     private List<User> users;
 
     public String getComment() {
         return comment;
     }
+
     public void setComment(String comment) {
         this.comment = comment;
     }

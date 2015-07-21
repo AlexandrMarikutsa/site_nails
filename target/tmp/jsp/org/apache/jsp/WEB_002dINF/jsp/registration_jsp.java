@@ -11,6 +11,7 @@ public final class registration_jsp extends org.apache.jasper.runtime.HttpJspBas
 
   private static java.util.List<String> _jspx_dependants;
 
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_forEach_var_items;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_url_value_nobody;
 
   private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
@@ -20,10 +21,12 @@ public final class registration_jsp extends org.apache.jasper.runtime.HttpJspBas
   }
 
   public void _jspInit() {
+    _jspx_tagPool_c_forEach_var_items = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_c_url_value_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
   }
 
   public void _jspDestroy() {
+    _jspx_tagPool_c_forEach_var_items.release();
     _jspx_tagPool_c_url_value_nobody.release();
   }
 
@@ -58,9 +61,10 @@ public final class registration_jsp extends org.apache.jasper.runtime.HttpJspBas
       if (_jspx_meth_c_url_1(_jspx_page_context))
         return;
       out.write("\"></script>\r\n</head>\r\n<body>\r\n<h1>Registration</h1>\r\n\r\n<form class=\"login-form well\" action=\"/registration\" method=\"post\">\r\n\r\n    <div class=\"form-group\">\r\n        <span class=\"must\">*</span><label for=\"email\">Email address</label>\r\n        <input type=\"email\" maxlength=\"39\" class=\"form-control js-email\" id=\"email\" name=\"email\" placeholder=\"Enter email\">\r\n    </div>\r\n    <div class=\"form-group \">\r\n        <span class=\"must\">*</span><label for=\"firstName\">First Name</label>\r\n        <input type=\"text\" maxlength=\"24\" class=\"form-control js-name\" id=\"firstName\" name=\"firstName\" placeholder=\"Enter your first name\">\r\n    </div>\r\n    <div class=\"form-group\">\r\n        <span class=\"must\">*</span><label for=\"lastName\">Last Name</label>\r\n        <input type=\"text\" maxlength=\"24\" class=\"form-control js-name\" id=\"lastName\" name=\"lastName\" placeholder=\"Enter your last name\">\r\n    </div>\r\n\r\n    <div class=\"form-group\">\r\n        <span class=\"must\">*</span><label for=\"password\">Password</label>\r\n        <input type=\"password\" maxlength=\"50\" class=\"form-control js-pass\" id=\"password\" name=\"password\" placeholder=\"Password\">\r\n");
-      out.write("    </div>\r\n    <div class=\"form-group \">\r\n        <span class=\"must\">*</span><label for=\"password\">Confirm password</label>\r\n        <input type=\"password\" maxlength=\"50\" class=\"form-control js-confirm-pass\" id=\"confirmPassword\"  name=\"confirmPassword\"\r\n               placeholder=\"Repeat your password\">\r\n    </div>\r\n\r\n    <div class=\"form-group \">\r\n        <label for=\"phoneNumber\">Phone</label>\r\n        <input type=\"text\" maxlength=\"29\" class=\"form-control js-phone\" id=\"phoneNumber\" name=\"phoneNumber\" placeholder=\"Enter your phone\">\r\n    </div>\r\n    <div class=\"form-group \">\r\n        <label for=\"birthday\">Birthday</label>\r\n        <input type=\"date\" name=\"birthday\" id=\"birthday\" name=\"birthday\" class=\"form-control js-birthday\">\r\n    </div>\r\n    <p class=\"err-msg\">");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${errorMessage}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("</p>\r\n    <input type=\"submit\" value=\"Register\" class=\"btn btn-primary\">\r\n\r\n</form>\r\n<script src=\"/resources/js/sign-in.js\"></script>\r\n\r\n</body>\r\n</html>\r\n");
+      out.write("    </div>\r\n    <div class=\"form-group \">\r\n        <span class=\"must\">*</span><label for=\"confirmPassword\">Confirm password</label>\r\n        <input type=\"password\" maxlength=\"50\" class=\"form-control js-confirm-pass\" id=\"confirmPassword\"  name=\"confirmPassword\"\r\n               placeholder=\"Repeat your password\">\r\n    </div>\r\n\r\n    <div class=\"form-group \">\r\n        <label for=\"phoneNumber\">Phone</label>\r\n        <input type=\"text\" maxlength=\"29\" class=\"form-control js-phone\" id=\"phoneNumber\" name=\"phoneNumber\" placeholder=\"Enter your phone\">\r\n    </div>\r\n    <div class=\"form-group \">\r\n        <label for=\"birthday\">Birthday</label>\r\n        <input type=\"date\" name=\"birthDay\" id=\"birthday\" class=\"form-control js-birthday\">\r\n    </div>\r\n    ");
+      if (_jspx_meth_c_forEach_0(_jspx_page_context))
+        return;
+      out.write("\r\n    <input type=\"submit\" value=\"Register\" class=\"btn btn-primary\">\r\n\r\n</form>\r\n<script src=\"/resources/js/sign-in.js\"></script>\r\n\r\n</body>\r\n</html>\r\n");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;
@@ -107,6 +111,43 @@ public final class registration_jsp extends org.apache.jasper.runtime.HttpJspBas
       return true;
     }
     _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_1);
+    return false;
+  }
+
+  private boolean _jspx_meth_c_forEach_0(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:forEach
+    org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_forEach_0 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _jspx_tagPool_c_forEach_var_items.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
+    _jspx_th_c_forEach_0.setPageContext(_jspx_page_context);
+    _jspx_th_c_forEach_0.setParent(null);
+    _jspx_th_c_forEach_0.setVar("errorMessage");
+    _jspx_th_c_forEach_0.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${errorMessages}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    int[] _jspx_push_body_count_c_forEach_0 = new int[] { 0 };
+    try {
+      int _jspx_eval_c_forEach_0 = _jspx_th_c_forEach_0.doStartTag();
+      if (_jspx_eval_c_forEach_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+        do {
+          out.write("\r\n        <p class=\"err-msg\">");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${errorMessage}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write("</p>\r\n    ");
+          int evalDoAfterBody = _jspx_th_c_forEach_0.doAfterBody();
+          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+            break;
+        } while (true);
+      }
+      if (_jspx_th_c_forEach_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_c_forEach_0[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_c_forEach_0.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_c_forEach_0.doFinally();
+      _jspx_tagPool_c_forEach_var_items.reuse(_jspx_th_c_forEach_0);
+    }
     return false;
   }
 }

@@ -13,9 +13,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
-/**
- * Created by Aleksander on 08.06.2015.
- */
 @Controller
 public class MainController {
     @Autowired
@@ -25,22 +22,23 @@ public class MainController {
     private PhotoService photoService;
 
     @RequestMapping("/")
-    public String index(){
+    public String index() {
         return "index";
     }
 
-    @RequestMapping(value ="/design", method = RequestMethod.GET)
-    public ModelAndView showAlbums(){
+    @RequestMapping(value = "/design", method = RequestMethod.GET)
+    public ModelAndView showAlbums() {
         ModelAndView mav = new ModelAndView("design");
-        List <Album> albums = albumService.readAlbums();
-        mav.addObject("albums",albums);
+        List<Album> albums = albumService.readAlbums();
+        mav.addObject("albums", albums);
         return mav;
     }
+
     @RequestMapping("/album/{albumId}")
-    public ModelAndView showAlbum(@PathVariable("albumId") int albumId){
+    public ModelAndView showAlbum(@PathVariable("albumId") int albumId) {
         List<Picture> allPictures = photoService.readAllPictures(albumId);
-        ModelAndView mav=new ModelAndView("album");
-        mav.addObject("pictures",allPictures);
+        ModelAndView mav = new ModelAndView("album");
+        mav.addObject("pictures", allPictures);
         mav.addObject(albumId);
         return mav;
     }

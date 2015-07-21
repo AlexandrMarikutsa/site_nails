@@ -13,9 +13,6 @@ import org.eclipse.jetty.webapp.WebXmlConfiguration;
 
 import java.io.File;
 
-/**
- * Created by Aleksander on 08.06.2015.
- */
 public class Run {
     public void testApplication() throws Exception {
         main(new String[0]);
@@ -23,7 +20,7 @@ public class Run {
 
     /**
      * @param -forceSC force using SocketConnector instead of SelectChannelConnector. Default on Vista
-     * @param -ssl start additional SSL connector on port 8443
+     * @param -ssl     start additional SSL connector on port 8443
      */
     public static void main(String[] args) throws Exception {
         Server server = new Server();
@@ -34,7 +31,7 @@ public class Run {
 
         Connector sslConnector = createSSLConnector(server, sslPort);
 
-        Connector[] connectors = new Connector[] { connector, sslConnector };
+        Connector[] connectors = new Connector[]{connector, sslConnector};
         server.setConnectors(connectors);
 
         WebAppContext webAppContext = new WebAppContext();
@@ -74,14 +71,15 @@ public class Run {
         return strPort != null ? Integer.parseInt(strPort) : 8080;
     }
 
-    static Connector createSelectChannelConnector(Server server,int port) {
+    static Connector createSelectChannelConnector(Server server, int port) {
         ServerConnector connector = new ServerConnector(server);
         connector.setIdleTimeout(1000 * 60 * 60);
         connector.setSoLingerTime(-1);
         connector.setPort(port);
         return connector;
     }
-    static Connector createSSLConnector(Server server,int port) {
+
+    static Connector createSSLConnector(Server server, int port) {
         SslContextFactory contextFactory = new SslContextFactory();
         contextFactory.setKeyStorePath("conf/dev.keystore");
         contextFactory.setKeyStorePassword("geekhub");

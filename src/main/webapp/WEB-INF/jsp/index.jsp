@@ -54,9 +54,9 @@
                         <a class="page-scroll" href="/about">About</a>
                     </li>
                     <security:authorize access="hasRole('ROLE_ADMIN')">
-                    <li>
-                        <a class="page-scroll" href="/admin">My account</a>
-                    </li>
+                        <li>
+                            <a class="page-scroll" href="/admin">My account</a>
+                        </li>
                     </security:authorize>
                     <security:authorize access="hasRole('ROLE_USER')">
                         <li>
@@ -83,7 +83,7 @@
                 <div class="col-md-8 col-md-offset-2">
                     <p class="intro-text">I can make you feel happy...</p>
                     <%--<a href="#about" class="btn btn-circle page-scroll">--%>
-                        <%--<i class="fa fa-angle-double-down animated"></i>--%>
+                    <%--<i class="fa fa-angle-double-down animated"></i>--%>
                     <%--</a>--%>
                 </div>
             </div>
@@ -94,7 +94,7 @@
 <!-- About Section -->
 <div class="content-section text-center" id="about">
 
-    <div  class="container">
+    <div class="container">
         <h2>Made by Olexandr Marikutsa</h2>
         <hr>
     </div>

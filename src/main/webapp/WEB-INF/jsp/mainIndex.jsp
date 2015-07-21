@@ -14,18 +14,18 @@
     <jsp:include page="source.jsp"></jsp:include>
 </head>
 <body>
-    <jsp:include page="myNavbar.jsp"></jsp:include>
-    <div id="wrapper">
-      <jsp:include page="sidebar.jsp"></jsp:include>
-        <div id="page-content-wrapper">
-        </div>
+<jsp:include page="myNavbar.jsp"></jsp:include>
+<div id="wrapper">
+    <jsp:include page="sidebar.jsp"></jsp:include>
+    <div id="page-content-wrapper">
     </div>
+</div>
 
-    <script>
-        $("#menu-toggle").click(function(e) {
-            e.preventDefault();
-            $("#wrapper").toggleClass("toggled");
-        });
-    </script>
+<script>
+    $("#menu-toggle").click(function (e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+</script>
 </body>
 </html>

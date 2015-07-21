@@ -3,7 +3,7 @@ package org.nails.service;
 
 import org.nails.dao.UserDao;
 import org.nails.exception.UserNotFoundException;
-import org.nails.hibernate.entity.Role;
+import org.nails.Role;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -26,13 +26,13 @@ public class CustomUserDetailsService implements UserDetailsService {
     @Transactional
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
         org.nails.hibernate.entity.User user = userDao.loadUserByUsername(email);
-        if(user == null){
-                throw new UserNotFoundException("User not found");
+        if (user == null) {
+            throw new UserNotFoundException("User not found");
         }
         try {
-                return new User(user.getEmail(),
-                        user.getPassword(),
-                        getAuthorities(user.getRole()));
+            return new User(user.getEmail(),
+                    user.getPassword(),
+                    getAuthorities(user.getRole()));
 
         } catch (Exception e) {
             throw new RuntimeException(e);
