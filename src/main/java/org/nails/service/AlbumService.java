@@ -2,6 +2,7 @@ package org.nails.service;
 
 import org.nails.hibernate.entity.Album;
 
+import org.springframework.cache.annotation.Cacheable;
 import java.util.List;
 
 public interface AlbumService {

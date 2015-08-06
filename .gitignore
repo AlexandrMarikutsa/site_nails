@@ -1,0 +1,11 @@
+.svn
+.metadata/
+.idea/
+*.iml
+*.mf
+atlassian-ide-plugin.xml
+.settings
+*.project
+*.classpath
+.target/
+

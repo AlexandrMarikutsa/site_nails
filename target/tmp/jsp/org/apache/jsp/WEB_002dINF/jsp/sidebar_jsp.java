@@ -86,7 +86,7 @@ public final class sidebar_jsp extends org.apache.jasper.runtime.HttpJspBase
     _jspx_th_security_authorize_0.setAccess("hasRole('ROLE_ADMIN')");
     int _jspx_eval_security_authorize_0 = _jspx_th_security_authorize_0.doStartTag();
     if (_jspx_eval_security_authorize_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
-      out.write("\r\n                    <li class=\"text-center\" style=\"margin-top: -15px\" >\r\n                        <h3>Admin Panel</h3>\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"#\" class=\"text-left\">Users</a>\r\n                    </li>\r\n                ");
+      out.write("\r\n                    <li class=\"text-center\" style=\"margin-top: -15px\">\r\n                        <h3>Admin Panel</h3>\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"#\" class=\"text-left\">Users</a>\r\n                    </li>\r\n                ");
     }
     if (_jspx_th_security_authorize_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_security_authorize_access.reuse(_jspx_th_security_authorize_0);
@@ -107,7 +107,7 @@ public final class sidebar_jsp extends org.apache.jasper.runtime.HttpJspBase
     _jspx_th_security_authorize_1.setAccess("hasRole('ROLE_USER') or hasRole('ROLE_ANONYMOUS')");
     int _jspx_eval_security_authorize_1 = _jspx_th_security_authorize_1.doStartTag();
     if (_jspx_eval_security_authorize_1 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
-      out.write("\r\n                    <li class=\"text-center\" style=\"margin-top: -15px\" >\r\n                        <h3>User Panel</h3>\r\n                    </li>\r\n                ");
+      out.write("\r\n                    <li class=\"text-center\" style=\"margin-top: -15px\">\r\n                        <h3>User Panel</h3>\r\n                    </li>\r\n                ");
     }
     if (_jspx_th_security_authorize_1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_security_authorize_access.reuse(_jspx_th_security_authorize_1);

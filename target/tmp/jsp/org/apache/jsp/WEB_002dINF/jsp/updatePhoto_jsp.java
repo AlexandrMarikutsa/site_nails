@@ -53,23 +53,23 @@ public final class updatePhoto_jsp extends org.apache.jasper.runtime.HttpJspBase
 
       out.write("\r\n<html>\r\n<meta charset=\"utf-8\">\r\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n<meta name=\"description\" content=\"\">\r\n<meta name=\"author\" content=\"\">\r\n<link rel=\"stylesheet\" href=\"css/bootstrap-image-gallery.min.css\">\r\n<title>Design</title>\r\n\r\n");
       org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "source.jsp", out, false);
-      out.write("\r\n</head>\r\n<body>\r\n  ");
+      out.write("\r\n</head>\r\n<body>\r\n");
       org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "myNavbar.jsp", out, false);
-      out.write("\r\n  <div id=\"wrapper\">\r\n    ");
+      out.write("\r\n<div id=\"wrapper\">\r\n    ");
       org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "sidebar.jsp", out, false);
-      out.write("\r\n\r\n      <div id=\"page-content-wrapper\">\r\n        <div class=\"container-fluid\">\r\n          <div class=\"row\">\r\n              <p>Photo name</p>\r\n              <input id ='photoName' type='text' value='");
+      out.write("\r\n\r\n    <div id=\"page-content-wrapper\">\r\n        <div class=\"container-fluid\">\r\n            <div class=\"row\">\r\n                <p>Photo name</p>\r\n                <input id='photoName' type='text' value='");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${picture.name}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("' name=\"photoName\"/>\r\n              <select size='1' id='albumId'>\r\n                <option selected value=\"");
+      out.write("' name=\"photoName\"/>\r\n                <select size='1' id='albumId'>\r\n                    <option selected value=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${picture.album.id}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write('"');
       out.write('>');
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${picture.album.name}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("</option>\r\n                ");
+      out.write("</option>\r\n                    ");
       if (_jspx_meth_c_forEach_0(_jspx_page_context))
         return;
-      out.write("\r\n              </select>\r\n            <p><input type='button' value='Save edits' onclick='saveUpdate();'/></p>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    <script>\r\n        $(\"#menu-toggle\").click(function(e) {\r\n          e.preventDefault();\r\n          $(\"#wrapper\").toggleClass(\"toggled\");\r\n        });\r\n\r\n        function saveUpdate() {\r\n          $.ajax({\r\n            url:\"/admin/saveUpdatePhoto\",\r\n            type:\"post\",\r\n            data:{photoName:$('#photoName').val(),photoId:");
+      out.write("\r\n                </select>\r\n\r\n                <p><input type='button' value='Save edits' onclick='saveUpdate();'/></p>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <script>\r\n        $(\"#menu-toggle\").click(function (e) {\r\n            e.preventDefault();\r\n            $(\"#wrapper\").toggleClass(\"toggled\");\r\n        });\r\n\r\n        function saveUpdate() {\r\n            $.ajax({\r\n                url: \"/admin/saveUpdatePhoto\",\r\n                type: \"post\",\r\n                data: {photoName: $('#photoName').val(), photoId:");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${picture.id}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write(",albumId:$('#albumId').val()},\r\n            success : function(data) {\r\n              window.location = data;\r\n            }\r\n          });\r\n\r\n        }\r\n    </script>\r\n  </div>\r\n</body>\r\n</html>\r\n");
+      out.write(", albumId: $('#albumId').val()},\r\n                success: function (data) {\r\n                    window.location = data;\r\n                }\r\n            });\r\n\r\n        }\r\n    </script>\r\n</div>\r\n</body>\r\n</html>\r\n");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;
@@ -98,12 +98,12 @@ public final class updatePhoto_jsp extends org.apache.jasper.runtime.HttpJspBase
       int _jspx_eval_c_forEach_0 = _jspx_th_c_forEach_0.doStartTag();
       if (_jspx_eval_c_forEach_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         do {
-          out.write("\r\n                  <option value=\"");
+          out.write("\r\n                        <option value=\"");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${album.id}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write('"');
           out.write('>');
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${album.name}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("</option>\r\n                ");
+          out.write("</option>\r\n                    ");
           int evalDoAfterBody = _jspx_th_c_forEach_0.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
             break;

@@ -8,8 +8,6 @@ import org.nails.service.AlbumService;
 import org.nails.service.PhotoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.multipart.MultipartFile;
-
 import javax.imageio.ImageIO;
 import javax.servlet.ServletContext;
 import javax.swing.*;
@@ -25,6 +23,8 @@ import java.util.List;
 @Service
 @Transactional
 public class PhotoServiceImpl implements PhotoService {
+    int summaZaprosov = 1;
+
     @Autowired
     ServletContext servletContext;
 
@@ -52,6 +52,7 @@ public class PhotoServiceImpl implements PhotoService {
 
     @Override
     public List<Picture> readAllPictures(int albumId) {
+        System.out.println("Koli4estvo zaprosov =  " + summaZaprosov++);
         return photoDao.getAllPictures(albumId);
     }
 

@@ -12,6 +12,7 @@ import java.util.List;
 @Service
 @Transactional
 public class AlbumServiceImpl implements AlbumService {
+
     @Autowired
     AlbumDao albumDao;
 
@@ -36,7 +37,7 @@ public class AlbumServiceImpl implements AlbumService {
         return albums;
     }
 
-    @Transactional
+    @Override
     public Album readAlbumById(int albumId) {
         return (Album) albumDao.read(albumId, Album.class);
     }

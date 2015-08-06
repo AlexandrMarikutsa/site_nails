@@ -51,10 +51,10 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
-      out.write("\r\n\r\n<html lang=\"en\">\r\n<head>\r\n  <title>LogIn</title>\r\n\r\n  <link href=\"/resources/css/style.css\" rel=\"stylesheet\" type=\"text/css\">\r\n  <link href=\"/resources/css/bootstrap.min.css\" rel=\"stylesheet\" type=\"text/css\">\r\n  <link href=\"/resources/css/bootstrap-them.min.css\" rel=\"stylesheet\" type=\"text/css\">\r\n\r\n</head>\r\n<body>\r\n<h1>LogIn</h1>\r\n\r\n<form class=\"login-form well\" action=\"/j_spring_security_check\" method=\"post\">\r\n\r\n\r\n  <div class=\"form-group\">\r\n    <label for=\"email\">Email address</label>\r\n    <input type=\"email\" class=\"form-control js-email\" id=\"email\" name=\"email\" placeholder=\"Enter email\">\r\n  </div>\r\n\r\n  <div class=\"form-group\">\r\n    <label for=\"password\">Password</label>\r\n    <input type=\"password\" class=\"form-control js-pass\" id=\"password\" name=\"password\" placeholder=\"Password\">\r\n  </div>\r\n\r\n  ");
+      out.write("\r\n\r\n<html lang=\"en\">\r\n<head>\r\n    <title>LogIn</title>\r\n\r\n    <link href=\"/resources/css/style.css\" rel=\"stylesheet\" type=\"text/css\">\r\n    <link href=\"/resources/css/bootstrap.min.css\" rel=\"stylesheet\" type=\"text/css\">\r\n    <link href=\"/resources/css/bootstrap-them.min.css\" rel=\"stylesheet\" type=\"text/css\">\r\n\r\n</head>\r\n<body>\r\n<h1>LogIn</h1>\r\n\r\n<form class=\"login-form well\" action=\"/j_spring_security_check\" method=\"post\">\r\n\r\n\r\n    <div class=\"form-group\">\r\n        <label for=\"email\">Email address</label>\r\n        <input type=\"email\" class=\"form-control js-email\" id=\"email\" name=\"email\" placeholder=\"Enter email\">\r\n    </div>\r\n\r\n    <div class=\"form-group\">\r\n        <label for=\"password\">Password</label>\r\n        <input type=\"password\" class=\"form-control js-pass\" id=\"password\" name=\"password\" placeholder=\"Password\">\r\n    </div>\r\n\r\n    ");
       if (_jspx_meth_c_if_0(_jspx_page_context))
         return;
-      out.write("\r\n  <input type=\"submit\" value=\"Submit\" class=\"btn btn-primary\">\r\n\r\n</form>\r\n\r\n");
+      out.write("\r\n    <input type=\"submit\" value=\"Submit\" class=\"btn btn-primary\">\r\n\r\n</form>\r\n\r\n");
       out.write("\r\n\r\n</body>\r\n</html>\r\n");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
@@ -81,7 +81,7 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
     int _jspx_eval_c_if_0 = _jspx_th_c_if_0.doStartTag();
     if (_jspx_eval_c_if_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
       do {
-        out.write("\r\n      <div class=\"err-msg\">Invalid email or password</div>\r\n  ");
+        out.write("\r\n        <div class=\"err-msg\">Invalid email or password</div>\r\n    ");
         int evalDoAfterBody = _jspx_th_c_if_0.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
           break;

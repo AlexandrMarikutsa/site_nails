@@ -1,13 +1,10 @@
 package org.nails.service;
 
-import org.nails.hibernate.entity.BaseEntity;
 import org.nails.hibernate.entity.Picture;
-import org.springframework.web.multipart.MultipartFile;
+import org.springframework.cache.annotation.Cacheable;
 
-import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.util.List;
-import java.util.Locale;
 
 public interface PhotoService {
     public void deletePhoto(int photoId);
@@ -16,6 +13,7 @@ public interface PhotoService {
 
     public void addPhoto(int albumId, String photoName);
 
+    @Cacheable(value = "defaultCache", key = "#albumId")
     public List<Picture> readAllPictures(int albumId);
 
     public Picture readPhotoById(int photoId);

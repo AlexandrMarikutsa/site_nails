@@ -17,7 +17,6 @@
         <logout logout-url="/j_spring_security_logout" logout-success-url="/auth?logout"/>
         <csrf disabled="true"/>
         <intercept-url pattern="/registration" access="hasRole('ROLE_ANONYMOUS')"/>
-        <!--<intercept-url pattern="/main" access="hasAnyRole('ROLE_USER','ROLE_ADMIN','ROLE_ANONYMOUS')"/>-->
         <intercept-url pattern="/user/**" access="hasAnyRole('ROLE_USER','ROLE_ADMIN')"/>
         <intercept-url pattern="/admin/**" access="hasRole('ROLE_ADMIN')"/>
     </http>

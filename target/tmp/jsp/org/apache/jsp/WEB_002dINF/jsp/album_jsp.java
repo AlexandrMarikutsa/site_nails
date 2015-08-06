@@ -60,29 +60,29 @@ static {
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
-      out.write("\r\n<html>\r\n  <meta charset=\"utf-8\">\r\n  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n  <meta name=\"description\" content=\"\">\r\n  <meta name=\"author\" content=\"\">\r\n  <link rel=\"stylesheet\" href=\"css/bootstrap-image-gallery.min.css\">\r\n  <title>Design</title>\r\n\r\n  ");
+      out.write("\r\n<html>\r\n<meta charset=\"utf-8\">\r\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n<meta name=\"description\" content=\"\">\r\n<meta name=\"author\" content=\"\">\r\n<link rel=\"stylesheet\" href=\"css/bootstrap-image-gallery.min.css\">\r\n<title>Design</title>\r\n\r\n");
       org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "source.jsp", out, false);
       out.write("\r\n</head>\r\n<body>\r\n");
       org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "myNavbar.jsp", out, false);
-      out.write("\r\n<div id=\"wrapper\">\r\n  ");
+      out.write("\r\n<div id=\"wrapper\">\r\n    ");
       org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "sidebar.jsp", out, false);
       if (_jspx_meth_security_authorize_0(_jspx_page_context))
         return;
-      out.write("\r\n  <p class=\"container\">\r\n    <!-- thumb navigation carousel -->\r\n    <div class=\"col-md-12 hidden-sm hidden-xs\" id=\"slider-thumbs\">\r\n\r\n      <!-- thumb navigation carousel items -->\r\n      <ul class=\"list-inline\">\r\n        <li> <a id=\"carousel-selector-0\" class=\"selected\">\r\n          <img src=\"");
+      out.write("\r\n    <p class=\"container\">\r\n        <!-- thumb navigation carousel -->\r\n\r\n    <div class=\"col-md-12 hidden-sm hidden-xs\" id=\"slider-thumbs\">\r\n\r\n        <!-- thumb navigation carousel items -->\r\n        <ul class=\"list-inline\">\r\n            <li><a id=\"carousel-selector-0\" class=\"selected\">\r\n                <img src=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pictures[0].directoryMini}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("\" class=\"img-responsive\">\r\n        </a></li>\r\n        ");
+      out.write("\" class=\"img-responsive\">\r\n            </a></li>\r\n            ");
       if (_jspx_meth_c_forEach_0(_jspx_page_context))
         return;
-      out.write("\r\n      </ul>\r\n\r\n    </div>\r\n\r\n\r\n    <!-- main slider carousel -->\r\n    <div class=\"row\">\r\n      <div class=\"col-md-12\" id=\"slider\">\r\n\r\n        <div class=\"col-md-12\" id=\"carousel-bounding-box\">\r\n          <div id=\"myCarousel\" class=\"carousel slide\">\r\n            <!-- main slider carousel items -->\r\n            <div class=\"carousel-inner\">\r\n              <div class=\"active item\" data-slide-number=\"0\" align=\"center\">\r\n                ");
+      out.write("\r\n        </ul>\r\n\r\n    </div>\r\n\r\n\r\n    <!-- main slider carousel -->\r\n    <div class=\"row\">\r\n        <div class=\"col-md-12\" id=\"slider\">\r\n\r\n            <div class=\"col-md-12\" id=\"carousel-bounding-box\">\r\n                <div id=\"myCarousel\" class=\"carousel slide\">\r\n                    <!-- main slider carousel items -->\r\n                    <div class=\"carousel-inner\">\r\n                        <div class=\"active item\" data-slide-number=\"0\" align=\"center\">\r\n                            ");
       if (_jspx_meth_security_authorize_1(_jspx_page_context))
         return;
-      out.write("\r\n                <img src=\"");
+      out.write("\r\n                            <img src=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pictures[0].directory}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("\" class=\"img-responsive\">\r\n              </div>\r\n              ");
+      out.write("\" class=\"img-responsive\">\r\n                        </div>\r\n                        ");
       if (_jspx_meth_c_forEach_1(_jspx_page_context))
         return;
-      out.write("\r\n            </div>\r\n            <!-- main slider carousel nav controls -->\r\n            <a class=\"carousel-control left\" href=\"#myCarousel\" data-slide=\"prev\">‹</a>\r\n            <a class=\"carousel-control right\" href=\"#myCarousel\" data-slide=\"next\">›</a>\r\n          </div>\r\n        </div>\r\n\r\n      </div>\r\n    </div>\r\n    <!--/main slider carousel-->\r\n\r\n  </div>\r\n<script>\r\n    $(\"#menu-toggle\").click(function(e) {\r\n      e.preventDefault();\r\n      $(\"#wrapper\").toggleClass(\"toggled\");\r\n    });\r\n    $('#myCarousel').carousel({\r\n      interval: 4000\r\n    });\r\n\r\n    // handles the carousel thumbnails\r\n    $('[id^=carousel-selector-]').click( function(){\r\n      var id_selector = $(this).attr(\"id\");\r\n      var id = id_selector.substr(id_selector.length -1);\r\n      id = parseInt(id);\r\n      $('#myCarousel').carousel(id);\r\n      $('[id^=carousel-selector-]').removeClass('selected');\r\n      $(this).addClass('selected');\r\n    });\r\n\r\n    // when the carousel slides, auto update\r\n    $('#myCarousel').on('slid', function (e) {\r\n");
-      out.write("      var id = $('.item.active').data('slide-number');\r\n      id = parseInt(id);\r\n      $('[id^=carousel-selector-]').removeClass('selected');\r\n      $('[id=carousel-selector-'+id+']').addClass('selected');\r\n    });\r\n</script>\r\n</div>\r\n</body>\r\n</html>\r\n");
+      out.write("\r\n                    </div>\r\n                    <!-- main slider carousel nav controls -->\r\n                    <a class=\"carousel-control left\" href=\"#myCarousel\" data-slide=\"prev\">‹</a>\r\n                    <a class=\"carousel-control right\" href=\"#myCarousel\" data-slide=\"next\">›</a>\r\n                </div>\r\n            </div>\r\n\r\n        </div>\r\n    </div>\r\n    <!--/main slider carousel-->\r\n\r\n</div>\r\n<script>\r\n    $(\"#menu-toggle\").click(function (e) {\r\n        e.preventDefault();\r\n        $(\"#wrapper\").toggleClass(\"toggled\");\r\n    });\r\n    $('#myCarousel').carousel({\r\n        interval: 4000\r\n    });\r\n\r\n    // handles the carousel thumbnails\r\n    $('[id^=carousel-selector-]').click(function () {\r\n        var id_selector = $(this).attr(\"id\");\r\n        var id = id_selector.substr(id_selector.length - 1);\r\n        id = parseInt(id);\r\n        $('#myCarousel').carousel(id);\r\n        $('[id^=carousel-selector-]').removeClass('selected');\r\n        $(this).addClass('selected');\r\n    });\r\n\r\n    // when the carousel slides, auto update\r\n");
+      out.write("    $('#myCarousel').on('slid', function (e) {\r\n        var id = $('.item.active').data('slide-number');\r\n        id = parseInt(id);\r\n        $('[id^=carousel-selector-]').removeClass('selected');\r\n        $('[id=carousel-selector-' + id + ']').addClass('selected');\r\n    });\r\n</script>\r\n</div>\r\n</body>\r\n</html>\r\n");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;
@@ -107,9 +107,9 @@ static {
     _jspx_th_security_authorize_0.setAccess("hasRole('ROLE_ADMIN')");
     int _jspx_eval_security_authorize_0 = _jspx_th_security_authorize_0.doStartTag();
     if (_jspx_eval_security_authorize_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
-      out.write("\r\n    <a class=\"page-scroll\" href=\"/admin/");
+      out.write("\r\n        <a class=\"page-scroll\" href=\"/admin/");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${albumId}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/addPhoto\">Add photo</a>\r\n  ");
+      out.write("/addPhoto\">Add photo</a>\r\n    ");
     }
     if (_jspx_th_security_authorize_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_security_authorize_access.reuse(_jspx_th_security_authorize_0);
@@ -137,9 +137,9 @@ static {
       int _jspx_eval_c_forEach_0 = _jspx_th_c_forEach_0.doStartTag();
       if (_jspx_eval_c_forEach_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         do {
-          out.write("\r\n          <li> <a id=\"carousel-selector-status\">\r\n            <img src=\"");
+          out.write("\r\n                <li><a id=\"carousel-selector-status\">\r\n                    <img src=\"");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${picture.directoryMini}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("\" class=\"img-responsive\">\r\n          </a></li>\r\n        ");
+          out.write("\" class=\"img-responsive\">\r\n                </a></li>\r\n            ");
           int evalDoAfterBody = _jspx_th_c_forEach_0.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
             break;
@@ -170,13 +170,13 @@ static {
     _jspx_th_security_authorize_1.setAccess("hasRole('ROLE_ADMIN')");
     int _jspx_eval_security_authorize_1 = _jspx_th_security_authorize_1.doStartTag();
     if (_jspx_eval_security_authorize_1 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
-      out.write("\r\n                  <a href=\"/admin/updatePhoto/");
+      out.write("\r\n                                <a href=\"/admin/updatePhoto/");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pictures[0].id}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("\" class=\"btn btn-warning btn-sm\" style=\"padding: 0; border: 3px\">Update</a>\r\n                  <a href=\"/admin/deletePhoto/");
+      out.write("\" class=\"btn btn-warning btn-sm\"\r\n                                   style=\"padding: 0; border: 3px\">Update</a>\r\n                                <a href=\"/admin/deletePhoto/");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pictures[0].id}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write('/');
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${albumId}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("\" class=\"btn btn-danger btn-sm\" style=\"padding: 0; border: 3px\">Delete</a>\r\n                  </p>\r\n                ");
+      out.write("\" class=\"btn btn-danger btn-sm\"\r\n                                   style=\"padding: 0; border: 3px\">Delete</a>\r\n                                </p>\r\n                            ");
     }
     if (_jspx_th_security_authorize_1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_security_authorize_access.reuse(_jspx_th_security_authorize_1);
@@ -204,12 +204,12 @@ static {
       int _jspx_eval_c_forEach_1 = _jspx_th_c_forEach_1.doStartTag();
       if (_jspx_eval_c_forEach_1 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         do {
-          out.write("\r\n                  <div class=\"item\" data-slide-number=\"status\" align=\"center\">\r\n                    ");
+          out.write("\r\n                            <div class=\"item\" data-slide-number=\"status\" align=\"center\">\r\n                                ");
           if (_jspx_meth_security_authorize_2((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_1, _jspx_page_context, _jspx_push_body_count_c_forEach_1))
             return true;
-          out.write("\r\n                    <img src=\"");
+          out.write("\r\n                                <img src=\"");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${picture.directory}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("\" class=\"img-responsive\">\r\n                  </div>\r\n              ");
+          out.write("\" class=\"img-responsive\">\r\n                            </div>\r\n                        ");
           int evalDoAfterBody = _jspx_th_c_forEach_1.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
             break;
@@ -240,13 +240,13 @@ static {
     _jspx_th_security_authorize_2.setAccess("hasRole('ROLE_ADMIN')");
     int _jspx_eval_security_authorize_2 = _jspx_th_security_authorize_2.doStartTag();
     if (_jspx_eval_security_authorize_2 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
-      out.write("\r\n                      <a href=\"/admin/updatePhoto/");
+      out.write("\r\n                                    <a href=\"/admin/updatePhoto/");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${picture.id}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("\" class=\"btn btn-warning btn-sm\" style=\"padding: 0; border: 3px\">Update</a>\r\n                      <a href=\"/admin/deletePhoto/");
+      out.write("\" class=\"btn btn-warning btn-sm\"\r\n                                       style=\"padding: 0; border: 3px\">Update</a>\r\n                                    <a href=\"/admin/deletePhoto/");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${picture.id}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write('/');
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${albumId}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("\" class=\"btn btn-danger btn-sm\" style=\"padding: 0; border: 3px\">Delete</a>\r\n                      </p>\r\n                    ");
+      out.write("\" class=\"btn btn-danger btn-sm\"\r\n                                       style=\"padding: 0; border: 3px\">Delete</a>\r\n                                    </p>\r\n                                ");
     }
     if (_jspx_th_security_authorize_2.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_security_authorize_access.reuse(_jspx_th_security_authorize_2);

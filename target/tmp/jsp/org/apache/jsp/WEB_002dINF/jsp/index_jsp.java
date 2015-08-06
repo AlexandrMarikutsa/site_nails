@@ -63,7 +63,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       if (_jspx_meth_security_authorize_1(_jspx_page_context))
         return;
       out.write("\r\n\r\n            </ul>\r\n        </div>\r\n        <!-- /.navbar-collapse -->\r\n    </div>\r\n    <!-- /.container -->\r\n</nav>\r\n\r\n<!-- Intro Header -->\r\n<header class=\"intro\">\r\n    <div class=\"intro-body\">\r\n        <div class=\"container\">\r\n            <div class=\"row\">\r\n                <div class=\"col-md-8 col-md-offset-2\">\r\n                    <p class=\"intro-text\">I can make you feel happy...</p>\r\n                    ");
-      out.write("\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</header>\r\n\r\n<!-- About Section -->\r\n<div class=\"content-section text-center\" id=\"about\">\r\n\r\n    <div  class=\"container\">\r\n        <h2>Made by Olexandr Marikutsa</h2>\r\n        <hr>\r\n    </div>\r\n</div>\r\n\r\n</body>\r\n\r\n</html>\r\n");
+      out.write("\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</header>\r\n\r\n<!-- About Section -->\r\n<div class=\"content-section text-center\" id=\"about\">\r\n\r\n    <div class=\"container\">\r\n        <h2>Made by Olexandr Marikutsa</h2>\r\n        <hr>\r\n    </div>\r\n</div>\r\n\r\n</body>\r\n\r\n</html>\r\n");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;
@@ -138,7 +138,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
     _jspx_th_security_authorize_2.setAccess("hasRole('ROLE_ADMIN')");
     int _jspx_eval_security_authorize_2 = _jspx_th_security_authorize_2.doStartTag();
     if (_jspx_eval_security_authorize_2 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
-      out.write("\r\n                    <li>\r\n                        <a class=\"page-scroll\" href=\"/admin\">My account</a>\r\n                    </li>\r\n                    ");
+      out.write("\r\n                        <li>\r\n                            <a class=\"page-scroll\" href=\"/admin\">My account</a>\r\n                        </li>\r\n                    ");
     }
     if (_jspx_th_security_authorize_2.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_security_authorize_access.reuse(_jspx_th_security_authorize_2);

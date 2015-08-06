@@ -60,15 +60,15 @@ public final class design_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
-      out.write("\r\n<html>\r\n  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n  <meta name=\"description\" content=\"\">\r\n  <meta name=\"author\" content=\"\">\r\n\r\n  <title>Designs</title>\r\n  ");
+      out.write("\r\n<html>\r\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n<meta name=\"description\" content=\"\">\r\n<meta name=\"author\" content=\"\">\r\n\r\n<title>Designs</title>\r\n");
       org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "source.jsp", out, false);
       out.write("\r\n</head>\r\n<body>\r\n");
       org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "myNavbar.jsp", out, false);
-      out.write("\r\n<div id=\"wrapper\">\r\n  ");
+      out.write("\r\n<div id=\"wrapper\">\r\n    ");
       org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "sidebar.jsp", out, false);
       if (_jspx_meth_security_authorize_0(_jspx_page_context))
         return;
-      out.write("\r\n\r\n  <div id=\"items\">\r\n    <div class=\" item masonry-brick\">\r\n      ");
+      out.write("\r\n\r\n    <div id=\"items\">\r\n        <div class=\" item masonry-brick\">\r\n            ");
       java.util.Random random = null;
       synchronized (_jspx_page_context) {
         random = (java.util.Random) _jspx_page_context.getAttribute("random", PageContext.PAGE_SCOPE);
@@ -79,7 +79,7 @@ public final class design_jsp extends org.apache.jasper.runtime.HttpJspBase
       }
       if (_jspx_meth_c_forEach_0(_jspx_page_context))
         return;
-      out.write("\r\n    </div>\r\n  </div>\r\n  <script>\r\n      $(\"#menu-toggle\").click(function(e) {\r\n        e.preventDefault();\r\n        $(\"#wrapper\").toggleClass(\"toggled\");\r\n      });\r\n\r\n      function showInput(data){\r\n          $('#'+data).html('<input type=\"text\"/>' +\r\n          '<a href=\"#\" class=\"btn btn-warning btn-sm\" style=\"padding: 0; border: 3px\">SAVE</a>')\r\n      }\r\n\r\n     </script>\r\n</div>\r\n</body>\r\n</html>\r\n");
+      out.write("\r\n        </div>\r\n    </div>\r\n    <script>\r\n        $(\"#menu-toggle\").click(function (e) {\r\n            e.preventDefault();\r\n            $(\"#wrapper\").toggleClass(\"toggled\");\r\n        });\r\n\r\n        function showInput(data) {\r\n            $('#' + data).html('<input type=\"text\"/>' +\r\n            '<a href=\"#\" class=\"btn btn-warning btn-sm\" style=\"padding: 0; border: 3px\">SAVE</a>')\r\n        }\r\n\r\n    </script>\r\n</div>\r\n</body>\r\n</html>\r\n");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;
@@ -104,7 +104,7 @@ public final class design_jsp extends org.apache.jasper.runtime.HttpJspBase
     _jspx_th_security_authorize_0.setAccess("hasRole('ROLE_ADMIN')");
     int _jspx_eval_security_authorize_0 = _jspx_th_security_authorize_0.doStartTag();
     if (_jspx_eval_security_authorize_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
-      out.write("\r\n    <a class=\"page-scroll\" href=\"#\">Add album</a>\r\n  ");
+      out.write("\r\n        <a class=\"page-scroll\" href=\"#\">Add album</a>\r\n    ");
     }
     if (_jspx_th_security_authorize_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_security_authorize_access.reuse(_jspx_th_security_authorize_0);
@@ -129,24 +129,24 @@ public final class design_jsp extends org.apache.jasper.runtime.HttpJspBase
       int _jspx_eval_c_forEach_0 = _jspx_th_c_forEach_0.doStartTag();
       if (_jspx_eval_c_forEach_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         do {
-          out.write("\r\n        <div class=\"picture\">\r\n          <p><a href=\"/album/");
+          out.write("\r\n                <div class=\"picture\">\r\n                    <p><a href=\"/album/");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${album.id}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("\">\r\n            ");
+          out.write("\">\r\n                        ");
           if (_jspx_meth_c_choose_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
             return true;
           if (_jspx_meth_c_choose_1((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
             return true;
-          out.write("\r\n          <div class=\"item-content\">\r\n            <div class=\"description\">\r\n              <p align=\"center\"><a id=");
+          out.write("\r\n                    <div class=\"item-content\">\r\n                        <div class=\"description\">\r\n                            <p align=\"center\"><a id=");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${album.id+2}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write(" href=\"/album/");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${album.id}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write('"');
           out.write('>');
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${album.name}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("</a>\r\n                ");
+          out.write("</a>\r\n                                ");
           if (_jspx_meth_security_authorize_1((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
             return true;
-          out.write("\r\n              </p>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      ");
+          out.write("\r\n                            </p>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            ");
           int evalDoAfterBody = _jspx_th_c_forEach_0.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
             break;
@@ -204,9 +204,9 @@ public final class design_jsp extends org.apache.jasper.runtime.HttpJspBase
     int _jspx_eval_c_when_0 = _jspx_th_c_when_0.doStartTag();
     if (_jspx_eval_c_when_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
       do {
-        out.write("\r\n                <img src=\"");
+        out.write("\r\n                        <img src=\"");
         out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${album.pictures[random.nextInt(album.pictures.size())].directory}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-        out.write("\"  id=\"myPicture\" width=\"100%\" , height=\"70%\" align=\"top\"></a></p>\r\n              ");
+        out.write("\" id=\"myPicture\"\r\n                             width=\"100%\" , height=\"70%\" align=\"top\"></a></p>\r\n                    ");
         int evalDoAfterBody = _jspx_th_c_when_0.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
           break;
@@ -258,7 +258,7 @@ public final class design_jsp extends org.apache.jasper.runtime.HttpJspBase
     int _jspx_eval_c_when_1 = _jspx_th_c_when_1.doStartTag();
     if (_jspx_eval_c_when_1 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
       do {
-        out.write("\r\n              <img src=\"/pictures_nails/camera.png\"  id=\"myPicture\" width=\"100%\" , height=\"70%\" align=\"top\"></a></p>\r\n            ");
+        out.write("\r\n                            <img src=\"/pictures_nails/camera.png\" id=\"myPicture\" width=\"100%\" , height=\"70%\"\r\n                                 align=\"top\"></a></p>\r\n                        ");
         int evalDoAfterBody = _jspx_th_c_when_1.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
           break;
@@ -283,11 +283,11 @@ public final class design_jsp extends org.apache.jasper.runtime.HttpJspBase
     _jspx_th_security_authorize_1.setAccess("hasRole('ROLE_ADMIN')");
     int _jspx_eval_security_authorize_1 = _jspx_th_security_authorize_1.doStartTag();
     if (_jspx_eval_security_authorize_1 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
-      out.write("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n                  <a id=");
+      out.write("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n                                    <a id=");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${album.id}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write(" onclick=\"showInput(");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${album.id+2}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write(")\" class=\"btn btn-warning btn-sm\" style=\"padding: 0; border: 3px\">Update</a>\r\n                  <a href=\"#\" class=\"btn btn-danger btn-sm\" style=\"padding: 0; border: 3px\">Delete album</a>\r\n                ");
+      out.write(")\" class=\"btn btn-warning btn-sm\"\r\n                                       style=\"padding: 0; border: 3px\">Update</a>\r\n                                    <a href=\"#\" class=\"btn btn-danger btn-sm\" style=\"padding: 0; border: 3px\">Delete\r\n                                        album</a>\r\n                                ");
     }
     if (_jspx_th_security_authorize_1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_security_authorize_access.reuse(_jspx_th_security_authorize_1);

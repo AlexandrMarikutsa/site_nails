@@ -43,11 +43,11 @@ public final class mainIndex_jsp extends org.apache.jasper.runtime.HttpJspBase
 
       out.write("\r\n\r\n<html>\r\n<head>\r\n    <meta charset=\"utf-8\">\r\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n    <meta name=\"description\" content=\"\">\r\n    <meta name=\"author\" content=\"\">\r\n\r\n    <title>Panel</title>\r\n\r\n    ");
       org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "source.jsp", out, false);
-      out.write("\r\n</head>\r\n<body>\r\n    ");
+      out.write("\r\n</head>\r\n<body>\r\n");
       org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "myNavbar.jsp", out, false);
-      out.write("\r\n    <div id=\"wrapper\">\r\n      ");
+      out.write("\r\n<div id=\"wrapper\">\r\n    ");
       org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "sidebar.jsp", out, false);
-      out.write("\r\n        <div id=\"page-content-wrapper\">\r\n        </div>\r\n    </div>\r\n\r\n    <script>\r\n        $(\"#menu-toggle\").click(function(e) {\r\n            e.preventDefault();\r\n            $(\"#wrapper\").toggleClass(\"toggled\");\r\n        });\r\n    </script>\r\n</body>\r\n</html>\r\n");
+      out.write("\r\n    <div id=\"page-content-wrapper\">\r\n    </div>\r\n</div>\r\n\r\n<script>\r\n    $(\"#menu-toggle\").click(function (e) {\r\n        e.preventDefault();\r\n        $(\"#wrapper\").toggleClass(\"toggled\");\r\n    });\r\n</script>\r\n</body>\r\n</html>\r\n");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;

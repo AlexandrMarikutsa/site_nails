@@ -59,7 +59,7 @@ public final class myNavbar_jsp extends org.apache.jasper.runtime.HttpJspBase
 
       if (_jspx_meth_c_set_0(_jspx_page_context))
         return;
-      out.write("\r\n<!-- Navigation -->\r\n<nav class=\"navbar navbar-default navbar-static-top\" role=\"navigation\" style=\"margin-bottom: 0\">\r\n    <div class=\"navbar-header\">\r\n        <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-collapse\">\r\n            <span class=\"sr-only\">Toggle navigation</span>\r\n\r\n        </button>\r\n        <i class=\"navbar-brand fa fa-bars fa-2x\" id=\"menu-toggle\"style=\"margin-top:-5px\"></i>\r\n    </div>\r\n    <!-- /.navbar-header -->\r\n\r\n    <ul class=\"nav navbar-top-links navbar-right\">\r\n        ");
+      out.write("\r\n<!-- Navigation -->\r\n<nav class=\"navbar navbar-default navbar-static-top\" role=\"navigation\" style=\"margin-bottom: 0\">\r\n    <div class=\"navbar-header\">\r\n        <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-collapse\">\r\n            <span class=\"sr-only\">Toggle navigation</span>\r\n\r\n        </button>\r\n        <i class=\"navbar-brand fa fa-bars fa-2x\" id=\"menu-toggle\" style=\"margin-top:-5px\"></i>\r\n    </div>\r\n    <!-- /.navbar-header -->\r\n\r\n    <ul class=\"nav navbar-top-links navbar-right\">\r\n        ");
       if (_jspx_meth_security_authorize_0(_jspx_page_context))
         return;
       if (_jspx_meth_security_authorize_1(_jspx_page_context))
@@ -71,7 +71,7 @@ public final class myNavbar_jsp extends org.apache.jasper.runtime.HttpJspBase
         return;
       if (_jspx_meth_security_authorize_4(_jspx_page_context))
         return;
-      out.write("\r\n            <!-- /.dropdown-user -->\r\n        </li>\r\n        <!-- /.dropdown -->\r\n    </ul>\r\n\r\n\r\n    <!-- /.navbar-top-links -->\r\n\r\n    <!-- /.navbar-static-side -->\r\n\r\n</nav>\r\n\r\n");
+      out.write("\r\n        <!-- /.dropdown-user -->\r\n        </li>\r\n        <!-- /.dropdown -->\r\n    </ul>\r\n\r\n\r\n    <!-- /.navbar-top-links -->\r\n\r\n    <!-- /.navbar-static-side -->\r\n\r\n</nav>\r\n\r\n");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;
@@ -161,10 +161,10 @@ public final class myNavbar_jsp extends org.apache.jasper.runtime.HttpJspBase
     _jspx_th_security_authorize_2.setAccess("hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')");
     int _jspx_eval_security_authorize_2 = _jspx_th_security_authorize_2.doStartTag();
     if (_jspx_eval_security_authorize_2 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
-      out.write("\r\n                <li><a href=\"");
+      out.write("\r\n        <li><a href=\"");
       if (_jspx_meth_c_url_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_security_authorize_2, _jspx_page_context))
         return true;
-      out.write("\"><i class=\"fa fa-sign-out fa-fw\"></i> Logout</a>\r\n                </li>\r\n            ");
+      out.write("\"><i class=\"fa fa-sign-out fa-fw\"></i> Logout</a>\r\n        </li>\r\n        ");
     }
     if (_jspx_th_security_authorize_2.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_security_authorize_access.reuse(_jspx_th_security_authorize_2);
@@ -203,7 +203,7 @@ public final class myNavbar_jsp extends org.apache.jasper.runtime.HttpJspBase
     _jspx_th_security_authorize_3.setAccess("hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')");
     int _jspx_eval_security_authorize_3 = _jspx_th_security_authorize_3.doStartTag();
     if (_jspx_eval_security_authorize_3 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
-      out.write("\r\n                <ul class=\"dropdown-menu dropdown-user\">\r\n                    <li class=\"divider\"></li>\r\n                    <li><a href=\"/auth?logout\"><i class=\"fa fa-sign-out fa-fw\"></i> Logout</a></li>\r\n                </ul>\r\n            ");
+      out.write("\r\n            <ul class=\"dropdown-menu dropdown-user\">\r\n                <li class=\"divider\"></li>\r\n                <li><a href=\"/auth?logout\"><i class=\"fa fa-sign-out fa-fw\"></i> Logout</a></li>\r\n            </ul>\r\n        ");
     }
     if (_jspx_th_security_authorize_3.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_security_authorize_access.reuse(_jspx_th_security_authorize_3);
@@ -224,7 +224,7 @@ public final class myNavbar_jsp extends org.apache.jasper.runtime.HttpJspBase
     _jspx_th_security_authorize_4.setAccess("!hasRole('ROLE_ADMIN') and !hasRole('ROLE_USER')");
     int _jspx_eval_security_authorize_4 = _jspx_th_security_authorize_4.doStartTag();
     if (_jspx_eval_security_authorize_4 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
-      out.write("\r\n               <ul>\r\n                    <li><a href=\"/registration\"><i class=\"fa fa-gear fa-fw\"></i>Register</a></li>\r\n                    <li><a href=\"/auth\"><i class=\"fa fa-sign-out fa-fw\"></i> Login</a></li>\r\n                </ul>\r\n            ");
+      out.write("\r\n            <ul>\r\n                <li><a href=\"/registration\"><i class=\"fa fa-gear fa-fw\"></i>Register</a></li>\r\n                <li><a href=\"/auth\"><i class=\"fa fa-sign-out fa-fw\"></i> Login</a></li>\r\n            </ul>\r\n        ");
     }
     if (_jspx_th_security_authorize_4.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_security_authorize_access.reuse(_jspx_th_security_authorize_4);

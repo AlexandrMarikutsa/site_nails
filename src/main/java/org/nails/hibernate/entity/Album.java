@@ -1,5 +1,6 @@
 package org.nails.hibernate.entity;
 
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -8,7 +9,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "album")
-public class Album extends BaseEntity {
+public class Album extends BaseEntity implements Serializable {
 
     private String name;
     private String description;
