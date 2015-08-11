@@ -2,6 +2,7 @@ package org.nails.dao.impl;
 
 import org.nails.dao.AlbumDao;
 import org.nails.hibernate.entity.Album;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -13,9 +14,10 @@ public class AlbumDaoImpl extends BaseDaoImpl implements AlbumDao {
     int summaZaprosovAllAlbums = 1;
 
     @Override
+    @Cacheable(value = "employeeCache")
     public List<Album> getAllAlbums() {
         System.out.println("Koli4estvo zaprosov allAlbums =  " + summaZaprosovAllAlbums++);
-        return sessionFactory.getCurrentSession().createCriteria(Album.class).setCacheable(true).list();
+        return sessionFactory.getCurrentSession().createCriteria(Album.class).list();
     }
 
 }

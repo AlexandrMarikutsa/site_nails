@@ -1,10 +1,11 @@
 package org.nails.dao.impl;
 
-        import org.hibernate.SessionFactory;
+import org.hibernate.SessionFactory;
         import org.hibernate.criterion.Restrictions;
         import org.nails.dao.PhotoDao;
         import org.nails.hibernate.entity.Picture;
         import org.springframework.beans.factory.annotation.Autowired;
+        import org.springframework.cache.annotation.Cacheable;
         import org.springframework.stereotype.Service;
 
         import javax.transaction.Transactional;
@@ -19,8 +20,9 @@ public class PhotoDaoImpl extends BaseDaoImpl implements PhotoDao {
     private SessionFactory sessionFactory;
 
     @Override
+    @Cacheable(value = "employeeCache")
     public List<Picture> getAllPictures(int albumId) {
         System.out.println("Koli4estvo zaprosov allPictures =  " + summaZaprosovAllPictures++);
-        return sessionFactory.getCurrentSession().createCriteria(Picture.class).add(Restrictions.eq("album.id", albumId)).setCacheable(true).list();
+        return sessionFactory.getCurrentSession().createCriteria(Picture.class).add(Restrictions.eq("album.id", albumId)).list();
     }
 }

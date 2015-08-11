@@ -12,7 +12,6 @@ import java.util.List;
 
 @Entity
 @Table(name = "picture")
-@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 public class Picture extends BaseEntity implements Serializable {
 
     private String name;

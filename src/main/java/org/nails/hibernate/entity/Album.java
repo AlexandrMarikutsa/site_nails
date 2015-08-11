@@ -1,7 +1,5 @@
 package org.nails.hibernate.entity;
 
-import org.hibernate.annotations.Cache;
-import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -11,7 +9,6 @@ import java.util.List;
 
 @Entity
 @Table(name = "album")
-@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 public class Album extends BaseEntity implements Serializable {
 
     private String name;
@@ -23,7 +20,6 @@ public class Album extends BaseEntity implements Serializable {
     private User user;
 
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "album")
-    @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
     private List<Picture> pictures = new ArrayList<Picture>();
 
     public Album() {
