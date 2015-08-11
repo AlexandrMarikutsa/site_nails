@@ -206,19 +206,44 @@
       <version>2.2.4</version>
     </dependency>
 
+    <!--<dependency>-->
+      <!--<groupId>com.google.code.simple-spring-memcached</groupId>-->
+      <!--<artifactId>spring-cache</artifactId>-->
+      <!--<version>3.1.0</version>-->
+    <!--</dependency>-->
+
+    <!--<dependency>-->
+      <!--<groupId>com.google.code.simple-spring-memcached</groupId>-->
+      <!--<artifactId>xmemcached-provider</artifactId>-->
+      <!--<version>3.1.0</version>-->
+    <!--</dependency>-->
+
+    <!-- EHCache Core APIs -->
     <dependency>
-      <groupId>com.google.code.simple-spring-memcached</groupId>
-      <artifactId>spring-cache</artifactId>
-      <version>3.1.0</version>
+      <groupId>net.sf.ehcache</groupId>
+      <artifactId>ehcache-core</artifactId>
+      <version>2.6.9</version>
+    </dependency>
+    <!-- Hibernate EHCache API -->
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-ehcache</artifactId>
+      <version>4.3.5.Final</version>
+    </dependency>
+    <!-- EHCache uses slf4j for logging -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-simple</artifactId>
+      <version>1.7.5</version>
     </dependency>
 
-    <dependency>
-      <groupId>com.google.code.simple-spring-memcached</groupId>
-      <artifactId>xmemcached-provider</artifactId>
-      <version>3.1.0</version>
-    </dependency>
+    <!--<dependency>-->
+      <!--<groupId>com.googlecode.ehcache-spring-annotations</groupId>-->
+      <!--<artifactId>ehcache-spring-annotations</artifactId>-->
+      <!--<version>1.2.0</version>-->
+    <!--</dependency>-->
 
-   </dependencies>
+  </dependencies>
   <properties>
     <spring.version>4.1.6.RELEASE</spring.version>
     <jetty.version>9.2.2.v20140723</jetty.version>

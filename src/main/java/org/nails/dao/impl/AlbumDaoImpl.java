@@ -10,9 +10,12 @@ import java.util.List;
 @Service
 @Transactional
 public class AlbumDaoImpl extends BaseDaoImpl implements AlbumDao {
+    int summaZaprosovAllAlbums = 1;
+
     @Override
     public List<Album> getAllAlbums() {
-        return sessionFactory.getCurrentSession().createCriteria(Album.class).list();
+        System.out.println("Koli4estvo zaprosov allAlbums =  " + summaZaprosovAllAlbums++);
+        return sessionFactory.getCurrentSession().createCriteria(Album.class).setCacheable(true).list();
     }
 
 }

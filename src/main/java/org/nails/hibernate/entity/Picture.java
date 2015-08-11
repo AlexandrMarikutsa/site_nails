@@ -1,12 +1,18 @@
 package org.nails.hibernate.entity;
 
+import org.hibernate.annotations.*;
+import org.hibernate.annotations.Cache;
 import javax.persistence.*;
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 @Table(name = "picture")
+@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 public class Picture extends BaseEntity implements Serializable {
 
     private String name;

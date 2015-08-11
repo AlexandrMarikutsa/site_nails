@@ -13,7 +13,7 @@ public interface PhotoService {
 
     public void addPhoto(int albumId, String photoName);
 
-    @Cacheable(value = "defaultCache", key = "#albumId")
+//    @Cacheable(value = "defaultCache", key = "#albumId")
     public List<Picture> readAllPictures(int albumId);
 
     public Picture readPhotoById(int photoId);

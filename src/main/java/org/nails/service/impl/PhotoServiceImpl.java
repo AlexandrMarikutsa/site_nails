@@ -7,6 +7,7 @@ import org.nails.hibernate.entity.Picture;
 import org.nails.service.AlbumService;
 import org.nails.service.PhotoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import javax.imageio.ImageIO;
 import javax.servlet.ServletContext;
@@ -23,7 +24,6 @@ import java.util.List;
 @Service
 @Transactional
 public class PhotoServiceImpl implements PhotoService {
-    int summaZaprosov = 1;
 
     @Autowired
     ServletContext servletContext;
@@ -50,9 +50,9 @@ public class PhotoServiceImpl implements PhotoService {
         photoDao.create(picture);
     }
 
+//    @Cacheable(cacheName = "getDog")
     @Override
     public List<Picture> readAllPictures(int albumId) {
-        System.out.println("Koli4estvo zaprosov =  " + summaZaprosov++);
         return photoDao.getAllPictures(albumId);
     }
 
