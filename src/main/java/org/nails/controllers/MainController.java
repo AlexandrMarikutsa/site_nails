@@ -23,9 +23,7 @@ public class MainController {
     private PhotoService photoService;
 
     @RequestMapping("/")
-    public String index() {
-        return "index";
-    }
+    public String index() {return "index";}
 
     @RequestMapping(value = "/design", method = RequestMethod.GET)
     public ModelAndView showAlbums() {
